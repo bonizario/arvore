@@ -1,12 +1,19 @@
 {% extends 'layout.njk' %}
 
 {% block custom_page_styles %}
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">  {# <link rel="stylesheet" href="/css/page-index-responsive.css"> #}
+
+  {# <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" /> #}
   <link rel="stylesheet" href="/css/book.css">
 {% endblock %}
 
 {% block content %}
-  <header>Árvore</header>
+  <header>
+    <nav class="navbar navbar-expand-sm custom-nav pd5">
+      <a class="navbar-brand" href="/">LOGO</a>
+    </nav>
+  </header>
+
   <main>
     <div class="car">
       <img class="car-img" src="/animations/items/car.gif" />

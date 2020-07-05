@@ -80,6 +80,7 @@ var recognition = new SpeechRecognition();
 var speechRecognitionGrammarList = new SpeechGrammarList();
 
 var fatalError = false;
+var totalTexts = '';
 
 function testSpeech() {
   // Grammar that will be recognised by the SpeechRecognition instance
@@ -100,6 +101,11 @@ function testSpeech() {
       .toLowerCase()
       .trim();
 
+    if (event.results[event.results.length - 1].isFinal) {
+      totalTexts += `${speechResult}\n`;
+      console.log('Final text: ' + totalTexts);
+    }
+
     console.log('Speech received: ' + speechResult + '.');
 
     // Results reliability
@@ -115,10 +121,7 @@ function testSpeech() {
 
         // Take actions if the similarity is greater than 70%
         if (similarity >= 0.7) {
-          if (
-            +tracker.value === 1 &&
-            'ensolarado ensolarada'.includes(triggerWord)
-          ) {
+          if (+tracker.value === 1 && triggerWord === 'ensolarada') {
             bookContainer.style.backgroundImage =
               'url("/animations/enviroment/birds1.gif")';
             setTimeout(() => {

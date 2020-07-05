@@ -10,10 +10,14 @@ html {
   overflow-x: hidden;
 }
 
-html, body {
+body {
   font: 400 14px 'Source Sans Pro', sans-serif;
+  -webkit-font-smoothing: antialiased;
   background-color: #ecf0f1;
   color: #222;
+}
+
+html, body {
   width: 100%;
   min-height: 100vh;
 }
@@ -27,17 +31,30 @@ html, body {
     supported by Chrome, Edge, Opera and Firefox */
 }
 
-header {
-  font-size: 32px;
-  font-weight: 700;
-  color: #f0f0f0;
+.custom-nav {
   background-color: #009bdf;
-  padding: 0 64px;
-
   display: flex;
   align-items: center;
-  min-height: 72px;
-  z-index: 9999;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.navbar-brand {
+  font-size: 32px;
+  font-family: Bungee, sans-serif;
+  padding: 0;
+}
+
+.custom-nav a {
+  color: whitesmoke;
+}
+
+header {
+  z-index: 20;
+}
+
+header > nav {
+  padding: 0 5% !important;
 }
 
 main {
@@ -75,7 +92,7 @@ main {
   border-radius: 4px;
 
   display: flex;
-  z-index: 1000;
+  z-index: 20;
 }
 
 .book .book-content {
