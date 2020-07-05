@@ -18,6 +18,10 @@ server.get('/livros/1', (req, res) => {
   return res.render('book.njk');
 });
 
+server.get('/relatorios', (req, res) => {
+  return res.render('dashboard.njk');
+});
+
 server.get('/', (req, res) => {
   return res.render('home.njk');
 });

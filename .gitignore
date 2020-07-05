@@ -1,5 +1,12 @@
+# Dependencies
 node_modules
 package-lock.json
+
+# Book animations
 **/animations/*
 !**/animations/.gitkeep
 !**/animations/standard.jpg
+
+# Dashboard images
+**/images/*
+!**/images/.gitkeep
