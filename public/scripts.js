@@ -5,6 +5,7 @@ const tracker = document.getElementById('tracker');
 
 const Book = {
   book: document.getElementById('book'),
+  currentContent: document.querySelector('.book .book-content'),
   content: {
     0: [],
     1: [
@@ -23,7 +24,7 @@ const Book = {
     4: [
       '&emsp;Enquanto os meninos se preparavam para a corrida, começou a chover!',
       '&emsp;Pedro então disse:',
-      '&emsp;— Rápido! Vamos para casa de carona no meu caminhão, tem espaço pra mais um.',
+      '&emsp;— Rápido! Vamos voltar de carona no meu caminhão, tem espaço pra mais um.',
     ],
     5: [
       '&emsp;Juntos, eles conseguiram chegar em casa a tempo.',
@@ -31,17 +32,24 @@ const Book = {
     ],
   },
   fillBook(bookContent) {
-    const currentContent = document.querySelector('.book .book-content');
     // clear previous paragraphs
-    currentContent.innerHTML = '';
+    Book.currentContent.innerHTML = '';
 
     // for every item in the array
     for (const p of bookContent) {
       const paragraph = document.createElement('p');
 
       paragraph.innerHTML = p;
-      currentContent.appendChild(paragraph);
+      Book.currentContent.appendChild(paragraph);
     }
+  },
+  setImage() {
+    // clear previous paragraphs
+    Book.currentContent.innerHTML = '';
+
+    Book.currentContent.style.background =
+      'url("/books/book1-b.svg") no-repeat center center';
+    Book.currentContent.style.backgroundSize = 'cover';
   },
   changePage(arrowButton, totalPages) {
     const currentPage = +tracker.value;
@@ -51,10 +59,15 @@ const Book = {
       arrowButton.id === 'left' ? currentPage - 1 : currentPage + 1;
 
     // first and last pages special cases
-    if (newPage < 1 || newPage > totalPages) return;
+    if (newPage < 0 || newPage > totalPages) return;
 
-    // filling the book with <p> tags
-    Book.fillBook(Book.content[newPage]);
+    if (newPage > 0) {
+      if (currentPage === 0) Book.currentContent.style.background = '';
+      // filling the book with <p> tags
+      Book.fillBook(Book.content[newPage]);
+    } else {
+      Book.setImage();
+    }
 
     // update tracker value
     tracker.value = newPage;
@@ -109,11 +122,6 @@ function testSpeech() {
 
     console.log('Speech received: ' + speechResult + '.');
 
-    // Results reliability
-    console.log(
-      'Confidence: ' + event.results[event.results.length - 1][0].confidence
-    );
-
     // Check the similarity between the recognized text and the original
     speechResult = speechResult.split(' ');
     for (var triggerWord of triggerWords) {
@@ -151,6 +159,12 @@ function testSpeech() {
 
           // Similarity between words/phrases
           console.log('Compared similarity: ' + similarity);
+
+          // Results reliability
+          // console.log(
+          // 'Confidence: ' +
+          // event.results[event.results.length - 1][0].confidence
+          // );
         }
       }
     }
@@ -317,6 +331,6 @@ function regex(str) {
 }
 
 document.addEventListener('DOMContentLoaded', event => {
-  Book.fillBook(Book.content[1]);
+  Book.setImage();
   testSpeech();
 });

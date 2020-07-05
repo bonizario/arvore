@@ -8,11 +8,7 @@ $(function () {
     '.ct-chart-product',
     {
       labels: ['Literatura infantojuvenil', 'Fábula', 'Fantasia'],
-      series: [
-        [8, 12, 14],
-        [2, 4, 5],
-        [1, 2, 4],
-      ],
+      series: [[8, 12, 14]],
     },
     {
       stackBars: true,
