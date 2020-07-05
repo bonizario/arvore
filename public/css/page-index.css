@@ -1,0 +1,78 @@
+header > nav {
+  padding: 0 5% !important;
+}
+
+.custom-nav {
+  background-color: #009bdf;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.navbar-brand {
+  font-size: 32px;
+  font-family: Bungee, sans-serif;
+  padding: 0;
+}
+
+.form-group.has-search {
+  flex: 1;
+  max-width: 480px;
+}
+
+.custom-nav a {
+  color: whitesmoke;
+}
+
+/* Bootstrap 4 text input with search icon */
+.form-group {
+  margin-bottom: 0;
+}
+
+.custom-nav .has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.custom-nav .has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+
+.custom-menu {
+  display: flex;
+  min-height: 48px;
+  background-color: #E542A3;
+}
+
+.custom-menu .nav-item {
+  font: 700 16px Ubuntu, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.custom-menu .navbar-nav {
+  padding: 4px 0;
+}
+
+.custom-menu .navbar-nav a {
+  padding: 0 12px !important;
+  color: #f0f0f0 !important;
+}
+
+.custom-menu .navbar-nav a:first-child {
+  padding-left: 0 !important;
+}
+
+.custom-btn {
+  background: #E542A3;
+  margin: 16px auto;
+  width: 90%;
+}

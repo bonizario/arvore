@@ -1,0 +1,40 @@
+{% extends 'layout.njk' %}
+
+{% block custom_page_styles %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="/css/book.css">
+{% endblock %}
+
+{% block content %}
+  <header>Árvore</header>
+  <main>
+    <div class="car">
+      <img class="car-img" src="/animations/items/car.gif" />
+    </div>
+    <div class="firetruck">
+      <img class="firetruck-img" src="/animations/items/firetruck.gif" />
+    </div>
+    <div class="house">
+      <img class="house-img" src="/animations/items/house2.gif" />
+    </div>
+    <div class="book-container">
+      <i
+        id="left"
+        class="navigate fa fa-chevron-left"
+        onclick="Book.changePage(this, 5)"
+      ></i>
+      <div class="book noselect" id="book">
+        <div class="book-content"></div>
+        <input type="hidden" value="1" id="tracker" />
+      </div>
+      <i
+        id="right"
+        class="navigate fa fa-chevron-right"
+        onclick="Book.changePage(this, 5)"
+      ></i>
+    </div>
+  </main>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
+  <script src="/scripts.js"> </script>
+{% endblock %}
