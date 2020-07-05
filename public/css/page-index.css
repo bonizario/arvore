@@ -3,7 +3,7 @@ header > nav {
 }
 
 .custom-nav {
-  background-color: #009bdf;
+  background-color: #30c1f0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,7 +49,7 @@ header > nav {
 .custom-menu {
   display: flex;
   min-height: 48px;
-  background-color: #E542A3;
+  background-color: #F04874;
 }
 
 .custom-menu .nav-item {
@@ -72,7 +72,7 @@ header > nav {
 }
 
 .custom-btn {
-  background: #E542A3;
+  background: #F04874;
   margin: 16px auto;
   width: 90%;
 }

@@ -1875,7 +1875,7 @@ Container / Wrapper
 }
 
 .dashboard-main-wrapper header {
-    background-color: #009bdf;
+    background-color: #30c1f0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -4003,11 +4003,11 @@ Pills vertical
 /* ----------------------
 label colors */
 .custom-primary {
-    color: #009bdf !important;
+    color: #30c1f0 !important;
 }
 
 .custom-secondary {
-    color: #E542A3 !important;
+    color: #F04874 !important;
 }
 
 /*-----------------------

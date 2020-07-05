@@ -172,7 +172,7 @@
   }
 
 .ct-series-a .ct-slice-donut {
-  stroke: #009bdf;
+  stroke: #30c1f0;
 }
 
 .ct-series-a .ct-slice-pie, .ct-series-a .ct-slice-donut-solid, .ct-series-a .ct-area {
@@ -183,7 +183,7 @@
   stroke: #f0346e;
   }
 .ct-series-b .ct-slice-donut {
-  stroke: #E542A3;
+  stroke: #F04874;
 }
 
 .ct-series-b .ct-slice-pie, .ct-series-b .ct-slice-donut-solid, .ct-series-b .ct-area {

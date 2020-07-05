@@ -233,8 +233,8 @@ var chart = c3.generate({
 
     colors: {
       Curiosidade: '#009bdf',
-      Felicidade: '#E542A3',
-      Ansiedade: '#ffc750',
+      Felicidade: '#F04874',
+      Ansiedade: '#F4F076',
     },
   },
   donut: {
