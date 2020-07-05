@@ -26,7 +26,7 @@
   margin: 0 1.5rem 1.5rem 0;
   display: inline-block;
   width: 100%;
-  border: solid 2px #777;
+  border: solid 2px #7779;
   padding: 5px;
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
@@ -38,7 +38,9 @@
 }
 
 .grid-container img {
-  width: 100%;
+  width: 210px;
+  height: 310px;
+  object-fit: cover;
   border-radius: 5px;
   transition: all 0.25s ease-in-out;
 }

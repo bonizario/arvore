@@ -138,11 +138,13 @@ main {
 .car-img {
   position: absolute;
   left: -600px;
+  z-index: 30;
 }
 
 .house-img{
   position: absolute;
   left: -800px;
+  z-index: 30;
 }
 
 .firetruck-img {

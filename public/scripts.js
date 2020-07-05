@@ -6,6 +6,7 @@ const tracker = document.getElementById('tracker');
 const Book = {
   book: document.getElementById('book'),
   content: {
+    0: [],
     1: [
       '&emsp;Lucas e Pedro são grandes amigos desde o jardim de infância.',
       '&emsp;Em um manhã ensolarada, eles saíram para brincar no quintal.',
